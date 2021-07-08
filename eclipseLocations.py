@@ -22,11 +22,10 @@ m = folium.Map(location=[41,15], tiles="OpenStreetMap", zoom_start=6)
 
 # Import the pandas library
 import pandas as pd
-
 # Make a data frame with dots to show on the map
 data = pd.DataFrame({
-   'lon':[13.033800, 12.464430, 15.080009969314204, 15.016040, 15.284260, 15.092450],
-   'lat':[41.982570, 45.590300, 37.5045164837884, 37.273682, 37.066170, 37.250870],
+   'lon':[15.22079794410736, 12.464430, 15.080009969314204, 15.016040, 15.284260, 15.092450],
+   'lat':[37.25071726709256, 45.590300, 37.5045164837884, 37.273682, 37.066170, 37.250870],
    'name':['Agnosta', 'Terra Nuora', 'Sanctuary', 'Carlentini', 'Syracuse', 'Villasmunda'],
    'value':[10, 12, 40, 70, 23, 1],
    'members':[['Cacciatore', 'Sechi', 'Donati', 'Blaserna', 'Agnello', 'De Lisa', 'Tagiliarini', 'Adams', 'Burton', 'Clifford'],['P Tacchini', 'Lorenzoni', 'Legnazzi', 'Nobile', 'A Tacchini', 'Diamilla Muller', 'Serra'],['Schott', 'Lane', 'Fitz', 'Chapman', 'Burgess', 'N Lockeyer', 'Mrs Lockeyer', 'Seabroke', 'Cumming', 'Thorpe', 'Pedlar'],['Watson'],['Party of the US Naval Observatory', 'Harkness', 'Hall', 'Eastman', 'Mrs Eastman', 'Brothes', 'Fryer', 'Griffiths'],['Raynard', 'Samuelson', 'Brett']],
