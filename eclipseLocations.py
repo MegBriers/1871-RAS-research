@@ -18,18 +18,24 @@ icon_star = BeautifyIcon(
 icon= BeautifyIcon(icon="star",text_color='#b3334f', background_color='transparent',border_color='transparent', inner_icon_style='font-size:20px')
 
 
-m = folium.Map(location=[41,15], tiles="OpenStreetMap", zoom_start=6)
+m = folium.Map(location=[38,15], tiles="OpenStreetMap", zoom_start=6)
+
+token = "pk.eyJ1IjoibWVnYnJpZXJzIiwiYSI6ImNrcXV5bDJlYjA5Yzcyd282bWZoamlwZzYifQ.24QGNEGBgTcoGJr2qLCwfA"
+tileurl = 'https://api.mapbox.com/v4/megbriers.0jmf591t/{z}/{x}/{y}@2x.png?access_token=' + str(token)
+
+#m = folium.Map(
+#    location=[48.73596, 11.18434], zoom_start=2, tiles=tileurl, attr='Mapbox', tilesize=256)
 
 # Import the pandas library
 import pandas as pd
 # Make a data frame with dots to show on the map
 data = pd.DataFrame({
-   'lon':[15.22079794410736, 12.464430, 15.080009969314204, 15.016040, 15.284260, 15.092450],
-   'lat':[37.25071726709256, 45.590300, 37.5045164837884, 37.273682, 37.066170, 37.250870],
+   'lon':[15.22079794410736, 14.239807255976544, 15.080009969314204, 15.016040, 15.284260, 15.092450],
+   'lat':[37.25071726709256, 37.07389710271728, 37.5045164837884, 37.273682, 37.066170, 37.250870],
    'name':['Agnosta', 'Terra Nuora', 'Sanctuary', 'Carlentini', 'Syracuse', 'Villasmunda'],
    'value':[10, 12, 40, 70, 23, 1],
    'members':[['Cacciatore', 'Sechi', 'Donati', 'Blaserna', 'Agnello', 'De Lisa', 'Tagiliarini', 'Adams', 'Burton', 'Clifford'],['P Tacchini', 'Lorenzoni', 'Legnazzi', 'Nobile', 'A Tacchini', 'Diamilla Muller', 'Serra'],['Schott', 'Lane', 'Fitz', 'Chapman', 'Burgess', 'N Lockeyer', 'Mrs Lockeyer', 'Seabroke', 'Cumming', 'Thorpe', 'Pedlar'],['Watson'],['Party of the US Naval Observatory', 'Harkness', 'Hall', 'Eastman', 'Mrs Eastman', 'Brothes', 'Fryer', 'Griffiths'],['Raynard', 'Samuelson', 'Brett']],
-   'summary':['Very near central line, mainly Italian observers','Only Italian observers, must be near central line','Photographers + Headquarters for time and latitude observations','Only one observer??','Party of the US Naval Observatory + others','Only British observers, not quite in the centre of Villasmunda either']
+   'summary':['Very near central line, mainly Italian observers','Only Italian observers, must be near central line, has definitely been renamed since 1860 as took forever to find likely location','Photographers + Headquarters for time and latitude observations','Only one observer??','Party of the US Naval Observatory + others','Only British observers, not quite in the centre of Villasmunda either']
 
 }, dtype=str)
 
